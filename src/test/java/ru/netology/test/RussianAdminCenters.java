@@ -1,12 +1,13 @@
 package ru.netology.test;
-import com.github.javafaker.Faker;
+
 import java.util.List;
 import java.util.Random;
+
 public class RussianAdminCenters {
     private final List<String> adminCenters;
     private final Random random;
 
-    public RussianAdminCenters(){
+    public RussianAdminCenters() {
         adminCenters = List.of("Москва",
                 "Санкт-Петербург",
                 "Симферополь",
@@ -77,6 +78,7 @@ public class RussianAdminCenters {
                 "Москва");
         random = new Random();
     }
+
     public String cities() {
         return adminCenters.get(random.nextInt(adminCenters.size()));
     }
