@@ -27,4 +27,4 @@ jobs:
         # Для проектов на базе Selenide необходимо добавить параметр для запуска браузера
         # в headless режиме -Dselenide.headless=true, параметр --info должен остаться
 
-        run: -Selenide.headless=true ./gradlew test --info
+        run: ./gradlew test -Dselenide.headless=true --info
