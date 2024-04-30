@@ -19,16 +19,5 @@ public class User {
     private final String name = faker.name().fullName();
     private final String phone = faker.expression("+7#######");
 
-    public String getCity() {
-        return city;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
 }
 
