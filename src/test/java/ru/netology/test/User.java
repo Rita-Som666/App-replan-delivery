@@ -11,13 +11,11 @@ import java.util.Locale;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
 public class User {
-    Faker faker = new Faker(new Locale("ru"));
-    RussianAdminCenters centers = new RussianAdminCenters();
-    private final String city = centers.cities();
-    private final String name = faker.name().fullName();
-    private final String phone = faker.expression("+7#######");
+
+    private String city;
+    private String name;
+    private String phone;
 
 }
 
