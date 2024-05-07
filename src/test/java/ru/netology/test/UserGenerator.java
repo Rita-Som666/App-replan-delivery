@@ -2,19 +2,23 @@ package ru.netology.test;
 
 
 import com.github.javafaker.Faker;
+import lombok.Value;
 
 import java.util.Locale;
 
-public class UserGenerator {
-    private final Faker faker;
+import static ru.netology.test.RussianAdminCenters.cities;
 
-    public UserGenerator() {
+@Value
+public class UserGenerator {
+    Faker faker;
+
+    private UserGenerator() {
         this.faker = new Faker(new Locale("ru"));
     }
 
     private static String randomCity() {
-        RussianAdminCenters centers = new RussianAdminCenters();
-        return centers.cities();
+
+        return cities();
     }
 
     private static String randomName() {
@@ -27,7 +31,7 @@ public class UserGenerator {
         return faker.expression("+7#######");
     }
 
-    public User generateUser() {
+    public static User generateUser() {
         return new User(randomCity(), randomName(), randomPhone());
     }
 
